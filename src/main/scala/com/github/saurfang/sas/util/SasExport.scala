@@ -30,7 +30,7 @@ object SasExport {
     val log = LogManager.getLogger(this.getClass.getName)
     log.info(args.mkString(" "))
 
-    val spark = SparkSession.builder.appName("Spark sas7bdat").getOrCreate()
+    val spark = SparkSession.builder.appName("Spark sas7bdat").config("spark.master", "local").getOrCreate()
     val df = spark.read.format("com.github.saurfang.sas.spark").load(args(0))
 
     val output = args(1)

@@ -113,8 +113,8 @@ OPTIONS (path "cars.sas7bdat")
 We included a simple `SasExport` Spark program that converts _.sas7bdat_ to _.csv_ or _.parquet_ files:
 
 ```bash
-sbt "run input.sas7bdat output.csv"
-sbt "run input.sas7bdat output.parquet"
+sbt "runMain com.github.saurfang.sas.util.SasExport input.sas7bdat output.csv"
+sbt "runMain com.github.saurfang.sas.util.SasExport input.sas7bdat output.parquet"
 ```
 
 To achieve more parallelism, use `spark-submit` script to run it on a Spark cluster. If you don't have a spark

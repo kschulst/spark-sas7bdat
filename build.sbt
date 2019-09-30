@@ -11,7 +11,9 @@ javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 libraryDependencies ++= Seq(
   "com.epam" % "parso" % "2.0.10",
   "org.scalatest" %% "scalatest" % "2.2.4" % "test",
-  "org.apache.logging.log4j" %% "log4j-api-scala" % "2.7"
+  "org.apache.logging.log4j" %% "log4j-api-scala" % "2.7",
+  "log4j" % "log4j" % "1.2.17",
+  "org.apache.spark" %% "spark-sql" % "2.2.0"
 )
 
 //sbt-spark-package
